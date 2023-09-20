@@ -1,8 +1,10 @@
 import React from 'react'
 
+
 export default function Navbar(props) {
-    console.log("Hello this is the Navbar component");
-    console.log(props);
+    // console.log("Hello this is the Navbar component");
+    // console.log(props);
+
   return (
 <nav className="navbar navbar-expand-lg bg-light">
   <div className="container-fluid">
