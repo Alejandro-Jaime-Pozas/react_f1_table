@@ -8,10 +8,21 @@ export default function Racers(props) {
         <div className='row py-5'>
             <h4 className="text-center">Driver Standings</h4>
             <form onSubmit={props.handleRacerSubmit}>
-                <input type='text' className='form-control' name='season'></input>
-                <input type='submit' value='Submit' ></input>
+                <div className="row">
+                    <div className="col-12 col-md-6 my-2">
+                        <input className='form-control' type="text" name="season" placeholder="Enter Season" />
+                    </div>
+                    <div className="col-12 col-md-6 my-2">
+                        <input className='form-control' type="text" name="season" placeholder="Enter Round" />
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col">
+                        <input type="submit" value="" className="btn btn-primary w-100 my-1" />
+                    </div>
+                </div>
             </form>
-            <table className='table table-primary table-striped'>
+            <table className='table table-primary table-striped my-3'>
                 <thead>
                     <tr>
                         {tableHeaders.map((th, i) => <th key={i} >{th}</th>)}
