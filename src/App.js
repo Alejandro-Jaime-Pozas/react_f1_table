@@ -19,7 +19,7 @@ export default function App() {
     // create an effect -> fn to execute after the State is changed. dependency array is a second parameter that you use to indicate when the useEffect should run. empty array means only render once. if you include arrays with states that are used, useEffect will run when those states are changed. 
     useEffect(() => {
         console.log("useEffect effect callback executed")
-        fetch('https://ergast.com/api/f1/2022/1/driverStandings.json')
+        fetch('https://ergast.com/api/f1/2023/1/driverStandings.json')
             .then(res => res.json())
             .then(data => {
                 let racerStandings = data.MRData.StandingsTable.StandingsLists[0].DriverStandings
