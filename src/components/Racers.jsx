@@ -13,7 +13,7 @@ export default function Racers(props) {
                         <input className='form-control' type="text" name="season" placeholder="Enter Season" />
                     </div>
                     <div className="col-12 col-md-6 my-2">
-                        <input className='form-control' type="text" name="season" placeholder="Enter Round" />
+                        <input className='form-control' type="text" name="round" placeholder="Enter Round" />
                     </div>
                 </div>
                 <div className="row">

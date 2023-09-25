@@ -16,8 +16,8 @@ export default function App() {
     // The useState function takes one argument, which is the initial value of the state variable. It returns an array with two elements: the current state value and a function to update it    
     const [racers, setRacers] = useState([])
 
-    const [season, setSeason] = useState(2022)
-    const [round, setRound] = useState(1)
+    const [season, setSeason] = useState(1950)
+    const [round, setRound] = useState(0)
 
     // create an effect -> fn to execute after the State is changed. dependency array is a second parameter that you use to indicate when the useEffect should run. empty array means only render once. if you include arrays with states that are used, useEffect will run when those states are changed. 
     useEffect(() => {
@@ -36,7 +36,8 @@ export default function App() {
         console.log(e)
         let newSeason = e.target.season.value
         let newRound = e.target.round.value
-        console.log(newSeason, newRound)
+        setSeason(newSeason)
+        setRound(newRound)
     }
 
     return (
