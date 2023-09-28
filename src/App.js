@@ -49,7 +49,7 @@ export default function App() {
                 <h1 className='text-center'>Hello World</h1>
                 <h3 className='text-center'>Total</h3>
                 {buttons.map((b, i) => <Button color={b.color} step={b.step} key={i} />)}
-                {/* <Racers/> */}
+                <Racers/>
                 <RacersClass test={123} />
                 {/* RACERS AS FUNCTION COMPONENT */}
                 {/* <Racers handleRacerSubmit={handleRacerSubmit} racers={racers} ></Racers> */}
