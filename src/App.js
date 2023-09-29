@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Button from './components/Button'
 import Racers from './components/Racers'
 import RacersClass from './components/RacersClass'
+import Kekambas from './components/Kekambas'
 
 export default function App() {
 
@@ -48,6 +49,7 @@ export default function App() {
             <div className='container'>
                 <h1 className='text-center'>Hello World</h1>
                 <h3 className='text-center'>Total</h3>
+                <Kekambas/>
                 {buttons.map((b, i) => <Button color={b.color} step={b.step} key={i} />)}
                 <Racers/>
                 <RacersClass test={123} />
