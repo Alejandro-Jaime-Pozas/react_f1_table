@@ -1,4 +1,5 @@
 import React from 'react'
+import KekambasRow from './KekambasRow'
 
 export default function KekambasTable(props) {
   return (
@@ -11,6 +12,9 @@ export default function KekambasTable(props) {
                     <th scope='col'>Participants</th>
                 </tr>
             </thead>
+            <tbody>
+                <KekambasRow kekambas={props.kekambas} />
+            </tbody>
         </table>
     </div>
   )

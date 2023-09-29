@@ -24,7 +24,10 @@ export default function Kekambas() {
 
     return (
         <>
-            <KekambasTable />
+            <div className="d-flex justify-content-center align-items-center">
+                <button type="button" className="btn btn-primary my-4" >Random activity</button>
+            </div>
+            <KekambasTable kekambas={kekambas} />
         </>
     )
 }
