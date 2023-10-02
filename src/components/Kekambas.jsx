@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import KekambasTable from './KekambasTable'
+import SortBy from './SortBy'
 
 export default function Kekambas() {
 
@@ -20,6 +21,19 @@ export default function Kekambas() {
             }
             )
     }, []) // square brackets checking for changes in that variable
+
+    // sort the activity type by user choice of sort
+    const handleSort = (sortType) => { 
+        let unsortedKekambas = [...kekambas]
+        let sorted = unsortedKekambas.sort((a,b) => { 
+            if (a[sortType] > b[sortType]) {
+                return 1
+            } else {
+                return -1
+            }
+        })
+        setKekambas(sorted)
+    }
     
 
     return (
@@ -27,6 +41,7 @@ export default function Kekambas() {
             <div className="d-flex justify-content-center align-items-center">
                 <button type="button" className="btn btn-primary my-4" >Random activity</button>
             </div>
+            <SortBy handleSort={handleSort} />
             <KekambasTable kekambas={kekambas} />
         </>
     )
